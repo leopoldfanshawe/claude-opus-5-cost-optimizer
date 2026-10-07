@@ -1,0 +1,16 @@
+{
+  "scenarios": [
+    {
+      "name": "support assistant: 60,000 requests a month, 6K-token cached context",
+      "usage": {"input_tokens": 48000000, "cache_read_input_tokens": 360000000, "cache_write_5m_tokens": 1800000, "cache_write_1h_tokens": 0, "output_tokens": 30000000}
+    },
+    {
+      "name": "coding team: 5 developers, 200 Claude Code sessions a month",
+      "usage": {"input_tokens": 8000000, "cache_read_input_tokens": 500000000, "cache_write_5m_tokens": 40000000, "cache_write_1h_tokens": 0, "output_tokens": 20000000}
+    },
+    {
+      "name": "contract review batch: 10,000 documents of 30K tokens",
+      "usage": {"input_tokens": 300000000, "cache_read_input_tokens": 20000000, "cache_write_5m_tokens": 200000, "cache_write_1h_tokens": 0, "output_tokens": 15000000}
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "checked": "2026-10-07",
+  "unit": "USD per 1M tokens",
+  "sources": {
+    "list": "https://platform.claude.com/docs/en/about-claude/pricing",
+    "gateway": "https://argolink.io/en/models/{model}"
+  },
+  "notes": [
+    "list: Anthropic's own rates. cache_write_5m is 1.25x input, cache_write_1h is 2x input.",
+    "gateway: the model page rates, 60% below list; a 1-hour cache write is billed at twice the input rate.",
+    "Neither column has a long-context surcharge for these models: the 1M window bills at standard rates.",
+    "gateway: claude-fable-5-1 requests at effort max bill at 3x."
+  ],
+  "models": {
+    "claude-opus-5-5": {
+      "list": {"input": 4, "output": 20, "cache_read": 0.2, "cache_write_5m": 5, "cache_write_1h": 8},
+      "gateway": {"input": 1.6, "output": 8, "cache_read": 0.08, "cache_write_5m": 2, "cache_write_1h": 3.2}
+    },
+    "claude-opus-5": {
+      "list": {"input": 5, "output": 25, "cache_read": 0.5, "cache_write_5m": 6.25, "cache_write_1h": 10},
+      "gateway": {"input": 2, "output": 10, "cache_read": 0.2, "cache_write_5m": 2.5, "cache_write_1h": 4}
+    },
+    "claude-opus-4-8": {
+      "list": {"input": 5, "output": 25, "cache_read": 0.5, "cache_write_5m": 6.25, "cache_write_1h": 10},
+      "gateway": {"input": 2, "output": 10, "cache_read": 0.2, "cache_write_5m": 2.5, "cache_write_1h": 4}
+    },
+    "claude-fable-5-1": {
+      "list": {"input": 10, "output": 50, "cache_read": 0.25, "cache_write_5m": 12.5, "cache_write_1h": 20},
+      "gateway": {"input": 4, "output": 20, "cache_read": 0.1, "cache_write_5m": 5, "cache_write_1h": 8},
+      "gateway_effort_multiplier": {"max": 3}
+    },
+    "claude-fable-5": {
+      "list": {"input": 10, "output": 50, "cache_read": 1, "cache_write_5m": 12.5, "cache_write_1h": 20},
+      "gateway": {"input": 4, "output": 20, "cache_read": 0.4, "cache_write_5m": 5, "cache_write_1h": 8}
+    },
+    "claude-sonnet-5": {
+      "list": {"input": 2, "output": 10, "cache_read": 0.2, "cache_write_5m": 2.5, "cache_write_1h": 4},
+      "gateway": {"input": 0.8, "output": 4, "cache_read": 0.08, "cache_write_5m": 1, "cache_write_1h": 1.6}
+    }
+  }
+}

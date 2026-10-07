@@ -1,0 +1,15 @@
+{
+  "id": "msg_example",
+  "type": "message",
+  "role": "assistant",
+  "model": "claude-opus-5-5",
+  "content": [{"type": "text", "text": "..."}],
+  "stop_reason": "end_turn",
+  "usage": {
+    "input_tokens": 1840,
+    "cache_creation_input_tokens": 12000,
+    "cache_creation": {"ephemeral_5m_input_tokens": 0, "ephemeral_1h_input_tokens": 12000},
+    "cache_read_input_tokens": 96000,
+    "output_tokens": 3100
+  }
+}
